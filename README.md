@@ -16,7 +16,7 @@ npm install @diffus/client
 Set your Diffus API key before the first API request.
 
 ```bash
-export DIFFUS_KEY="your-api-key"
+export DIFFUS_KEY="YOUR_API_KEY"
 ```
 
 You can also configure credentials in JavaScript before making a request:
@@ -25,7 +25,7 @@ You can also configure credentials in JavaScript before making a request:
 import { fal } from "@diffus/client";
 
 fal.config({
-    credentials: "your-api-key",
+    credentials: "YOUR_API_KEY",
 });
 ```
 
@@ -38,9 +38,7 @@ Use `subscribe` to submit a generation request and wait for the final result.
 ```js
 import { fal } from "@diffus/client";
 
-const modelName = "diffus-ai/dreamshaper-8";
-
-const result = await fal.subscribe(modelName, {
+const result = await fal.subscribe("diffus-ai/dreamshaper-8", {
     input: {
         prompt: "A cinematic portrait of a dancing girl",
         aspect_ratio: "16:9",
